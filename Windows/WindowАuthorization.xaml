@@ -1,0 +1,30 @@
+﻿<Window x:Class="MaistrovaAkropol.Windows.WindowАuthorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaistrovaAkropol.Windows"
+        mc:Ignorable="d"
+        Title="WindowАuthorization" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <Image Source="/Resource/scale_1200.png" Grid.Column="1" Grid.Row="0"/>
+        <Image Source="/Resource/agentstvo-nedvizhimosti-heops.jpg" Grid.Column="0" Grid.RowSpan="2" Stretch="Fill"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Text="Авторизация" Margin="20" FontWeight="Bold" FontSize="36" Foreground="#FF4488C5" />
+            <TextBlock Text="Логин" FontWeight="Bold" FontSize="16" Foreground="#FF4488C5" />
+            <TextBox Name="LoginTB" BorderThickness="0 0 0 1"/>
+            <TextBlock Text="Пароль" FontWeight="Bold" FontSize="16" Foreground="#FF4488C5" />
+            <PasswordBox Name="PasswordPB" BorderThickness="0 0 0 1"/>
+            <Button Click="Button_Click" Content="Войти" Margin="10" Width="50" FontWeight="Bold" FontSize="14" Foreground="#FF4488C5" BorderBrush="Transparent" Background="Transparent"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,34 @@
+﻿<Page x:Class="MaistrovaAkropol.Pages.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MaistrovaAkropol.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page2">
+
+    <Grid>
+        <Grid>
+            <DataGrid x:Name="DateGr1" AutoGenerateColumns="False" HorizontalAlignment="Center"
+              Height="300" Width="550" VerticalAlignment="Top" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Этажность здания" Width="80" Binding="{Binding FloorsBuilding}"/>
+                    <DataGridTextColumn Header="Занимаемый этаж" Width="80" Binding="{Binding OccupiedFloor}"/>
+                    <DataGridTextColumn Header="Дата постройки" Width="110" Binding="{Binding YearConstruction, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                    <DataGridTextColumn Header="Расположение" Width="80" Binding="{Binding Location.Name}"/>
+                    <DataGridTextColumn Header="Количество комнат" Width="90" Binding="{Binding NumberRooms}"/>
+                    <DataGridTextColumn Header="Тип ванной комнаты" Width="120" Binding="{Binding Bathrooms.Name}"/>
+                    <DataGridCheckBoxColumn Header="Наличие кондиционера" Width="120" Binding="{Binding Conditioners}"/>
+                    <DataGridTextColumn Header="Стоимость по кадастру" Width="120" Binding="{Binding SummaObjectCadastre}"/>
+                    <DataGridTextColumn Header="Рыночная стоимость" Width="120" Binding="{Binding MarketValueObject}"/>
+                    <DataGridTextColumn Header="Арендная стоимость" Width="120" Binding="{Binding RentalCost}"/>
+                    <DataGridTextColumn Header="Адрес" Width="90" Binding="{Binding Adress}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Margin="100 250 0 0" Text="Изменить сумму" FontSize="25" Foreground="#FF4488C5" FontWeight="Bold" VerticalAlignment="Center"/>
+            <TextBox Width="100" Height="20" Margin="250 250 120 0" Name="TB1"/>
+            <Button Width="90" Height="30" Content="Сохранить" FontSize="14" Foreground="#FF034683" FontWeight="Bold" VerticalAlignment="Bottom" Margin="30" Name="BT1" Click="BT1_Click"/>
+        </Grid>
+    </Grid>
+</Page>

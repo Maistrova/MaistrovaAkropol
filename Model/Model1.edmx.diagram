@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad778e59803047c293b5975aef45c804" Name="Diagram1" DisplayType="true">
+        <EntityTypeShape EntityType="AkropolMaistrovaModel.Bathrooms" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AkropolMaistrovaModel.HousingStock" Width="3.625" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AkropolMaistrovaModel.Location" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AkropolMaistrovaModel.Manager" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AkropolMaistrovaModel.RentalBuildings" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AkropolMaistrovaModel.Role" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AkropolMaistrovaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="AkropolMaistrovaModel.FK_HousingStock_Bathrooms" ManuallyRouted="false" />
+        <AssociationConnector Association="AkropolMaistrovaModel.FK_HousingStock_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="AkropolMaistrovaModel.FK_HousingStock_RentalBuildings" ManuallyRouted="false" />
+        <AssociationConnector Association="AkropolMaistrovaModel.FK_Manager_HousingStock" ManuallyRouted="false" />
+        <AssociationConnector Association="AkropolMaistrovaModel.FK_Manager_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

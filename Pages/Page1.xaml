@@ -1,0 +1,37 @@
+﻿<Page x:Class="MaistrovaAkropol.Pages.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MaistrovaAkropol.Pages"
+      mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="600"
+      Title="Page1">
+
+    <Grid>
+        <DataGrid Grid.Row="1" x:Name="DateGr1" AutoGenerateColumns="False"
+              Height="300" Width="400" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Этажность здания" Width="auto" Binding="{Binding FloorsBuilding}"/>
+                <DataGridTextColumn Header="Занимаемый этаж" Width="auto" Binding="{Binding OccupiedFloor}"/>
+                <DataGridTextColumn Header="Дата постройки" Width="auto" Binding="{Binding YearConstruction, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                <DataGridTextColumn Header="Расположение" Width="auto" Binding="{Binding Location.Name}"/>
+                <DataGridTextColumn Header="Количество комнат" Width="auto" Binding="{Binding NumberRooms}"/>
+                <DataGridTextColumn Header="Тип ванной комнаты" Width="auto" Binding="{Binding Bathrooms.Name}"/>
+                <DataGridCheckBoxColumn Header="Наличие кондиционера" Width="auto" Binding="{Binding Conditioners}"/>
+                <DataGridTextColumn Header="Стоимость по кадастру" Width="auto" Binding="{Binding SummaObjectCadastre}"/>
+                <DataGridTextColumn Header="Рыночная стоимость" Width="auto" Binding="{Binding MarketValueObject}"/>
+                <DataGridTextColumn Header="Арендная стоимость" Width="auto" Binding="{Binding RentalCost}"/>
+                <DataGridTextColumn Header="Адрес" Width="auto" Binding="{Binding Adress}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock Text="Начало" FontSize="20" Foreground="#FF4488C5" FontWeight="Bold" Margin="10"/>
+            <DatePicker Height="30" Width="100" Margin="10" Name="DP1"/>
+            <TextBlock Text="Конец" FontSize="20" Foreground="#FF4488C5" FontWeight="Bold" Margin="10"/>
+            <DatePicker Height="30" Width="100" Margin="10" Name="DP2"/>
+            <TextBlock Margin="10" Text="Прибыль" FontSize="20" Foreground="#FF4488C5" FontWeight="Bold" VerticalAlignment="Center"/>
+            <TextBox Width="100" Height="20" Name="TB1"/>
+            <Button Width="90" Height="30" Content="Расчитать" FontSize="14" Foreground="#FF034683" FontWeight="Bold" VerticalAlignment="Bottom" Margin="10" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

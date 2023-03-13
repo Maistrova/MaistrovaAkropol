@@ -1,0 +1,29 @@
+﻿<Page x:Class="MaistrovaAkropol.Pages.Page4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MaistrovaAkropol.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page4">
+
+    <Grid>
+        <DataGrid x:Name="DateGr" AutoGenerateColumns="False" HorizontalAlignment="Center"
+              Height="400" Width="550" VerticalAlignment="Center">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Этажность здания" Width="80" Binding="{Binding FloorsBuilding}"/>
+                <DataGridTextColumn Header="Занимаемый этаж" Width="80" Binding="{Binding OccupiedFloor}"/>
+                <DataGridTextColumn Header="Дата постройки" Width="110" Binding="{Binding YearConstruction, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                <DataGridTextColumn Header="Расположение" Width="80" Binding="{Binding Location.Name}"/>
+                <DataGridTextColumn Header="Количество комнат" Width="90" Binding="{Binding NumberRooms}"/>
+                <DataGridTextColumn Header="Тип ванной комнаты" Width="120" Binding="{Binding Bathrooms.Name}"/>
+                <DataGridCheckBoxColumn Header="Наличие кондиционера" Width="120" Binding="{Binding Conditioners}"/>
+                <DataGridTextColumn Header="Стоимость по кадастру" Width="120" Binding="{Binding SummaObjectCadastre}"/>
+                <DataGridTextColumn Header="Рыночная стоимость" Width="120" Binding="{Binding MarketValueObject}"/>
+                <DataGridTextColumn Header="Арендная стоимость" Width="120" Binding="{Binding RentalCost}"/>
+                <DataGridTextColumn Header="Адрес" Width="90" Binding="{Binding Adress}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
